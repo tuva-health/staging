@@ -12,10 +12,10 @@ To configure each stage table, you should modify the sql file for the model so t
 ## Models
 | **staging table** | **description** |
 | --------------- | -------------------- |
-| [stg_patients](models/patients.sql) | One record per patient with basic demographic information. |
-| [stg_encounters](models/encounters.sql) | One record per encounter with basic administrative information and links to stg_patients. |
-| [stg_diagnoses](models/diagnoses.sql) | One record per diagnosis which links back to stg_encounters. |
-| [stg_procedures](models/procedures.sql) | One record per procedure which links back to stg_encounters. |
+| [patients](models/patients.sql) | One record per patient with basic demographic information. |
+| [encounters](models/encounters.sql) | One record per encounter with basic administrative information and links to stg_patients. |
+| [diagnoses](models/diagnoses.sql) | One record per diagnosis which links back to stg_encounters. |
+| [procedures](models/procedures.sql) | One record per procedure which links back to stg_encounters. |
 
 ## Tests
 This package tests your raw healthcare data several common problems including:

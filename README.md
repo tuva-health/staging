@@ -1,4 +1,7 @@
 # Staging
+
+Check out the [docs](https://tuva-health.github.io/staging/)
+
 This package is where you configure your source data (claims or EHR data).  The models from this package power the rest of the Tuva Health dbt packages.  The current staging package is very lean - it only includes 4 tables and 18 total columns.
 
 Creating the staging layer data tables requires two things:
