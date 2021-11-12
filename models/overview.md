@@ -1,3 +1,5 @@
+{% docs __overview__ %}
+
 # Staging
 This package is where you configure your source data (claims or EHR data).  The models from this package power the rest of the Tuva Health dbt packages.  The current staging package is very lean - it only includes 4 tables and 18 total columns.
 
@@ -10,10 +12,10 @@ To configure each stage table, you should modify the sql file for the model so t
 ## Models
 | **staging table** | **description** |
 | --------------- | -------------------- |
-| [patients](models/patients.sql) | One record per patient with basic demographic information. |
-| [encounters](models/encounters.sql) | One record per encounter with basic administrative information and links to stg_patients. |
-| [diagnoses](models/diagnoses.sql) | One record per diagnosis which links back to stg_encounters. |
-| [procedures](models/procedures.sql) | One record per procedure which links back to stg_encounters. |
+| [stg_patients](models/patients.sql) | One record per patient with basic demographic information. |
+| [stg_encounters](models/encounters.sql) | One record per encounter with basic administrative information and links to stg_patients. |
+| [stg_diagnoses](models/diagnoses.sql) | One record per diagnosis which links back to stg_encounters. |
+| [stg_procedures](models/procedures.sql) | One record per procedure which links back to stg_encounters. |
 
 ## Tests
 This package tests your raw healthcare data several common problems including:
@@ -36,9 +38,5 @@ packages:
 ## Database Support
 This package has been tested on Snowflake.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+{% enddocs %}
